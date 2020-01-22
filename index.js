@@ -18,7 +18,32 @@ function onError(id) {
 }
 
 obtenerPersonaje(1)
-    .then(function(personaje) {
+    .then(personaje => {
         console.log(`El personaje 1 es ${personaje.name}`)
+        return obtenerPersonaje(2)
     })
-    .catch(onError)
+    .then(personaje => {
+        console.log(`El personaje 2 es ${personaje.name}`)
+        return obtenerPersonaje(3)
+    })
+    .then(personaje => {
+        console.log(`El personaje 3 es ${personaje.name}`)
+        return obtenerPersonaje(4)
+    })
+    .then(personaje => {
+        console.log(`El personaje 4 es ${personaje.name}`)
+        return obtenerPersonaje(5)
+    })
+    .then(personaje => {
+        console.log(`El personaje 5 es ${personaje.name}`)
+        return obtenerPersonaje(6)
+    })
+    .then(personaje => {
+        console.log(`El personaje 6 es ${personaje.name}`)
+        return obtenerPersonaje(7)
+    })
+    .then(personaje => {
+        console.log(`El personaje 7 es ${personaje.name}`)
+    })
+
+.catch(onError)
